@@ -17,7 +17,7 @@ try:
 		#ie, this will loop forever until GPIO.input(23) becomes 0
 		while (GPIO.input(23) == 1):
 			pass
-		print "Ding!";
+		print "Button Pressed!";
 		GPIO.output(14,True)
 		GPIO.output(15,False)
 		GPIO.output(18,False)
