@@ -1,7 +1,7 @@
 #!/usr/bin/python
 ###########################################################################
 #Filename      :breathing_led.py
-#Description   :make breath led
+#Description   :Breathing LED
 #Author        :alan
 #Website       :www.osoyoo.com
 #Update        :2017/06/26
@@ -13,21 +13,21 @@ import time
 #set BCM_GPIO 18(GPIO1) as LED pin
 LEDPIN = 18
 
-#print message at the begining ---custom function
+#print message at the begining
 def print_message():
     print ('|**********************************|')
     print ('|           Breath LED             |')
     print ('|  ----------------------------    |')
-    print ('|      LED Connect to GPIO1        |')
+    print ('|      LED Connected to GPIO18     |')
     print ('|  ----------------------------    |')
     print ('|                                  |')
-    print ('|                            OSOYOO|')
+    print ('|                                  |')
     print ('|**********************************|\n')
     print ('Program is running...')
     print ('Please press Ctrl+C to end the program...')
     pass
 
-#setup function for some setup---custom function
+#setup function
 def setup():
     global p
     GPIO.setwarnings(False)
@@ -38,7 +38,7 @@ def setup():
 
     #set LEDPIN as PWM output,and frequency=100Hz
     p = GPIO.PWM(LEDPIN,100)
-    #set p begin with ualue 0
+    #set p begin with value 0
     p.start(0)
     pass
 
@@ -52,7 +52,7 @@ def main():
         print("|****************************|")
         #increase duty cycle from 0 to 100
         for dc in range(0,101,4):
-            #chang duty cycle to dc
+            #change duty cycle to dc
             p.ChangeDutyCycle(dc)
             time.sleep(0.1)
             pass
@@ -78,7 +78,7 @@ def destroy():
     GPIO.cleanup()
     pass
 
-# if run this script directly ,do:
+# When Script is executed run these functions:
 if __name__ == '__main__':
     setup()
     try:
