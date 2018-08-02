@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 
 
-print "Hit Ctrl+C to stop...";
+print("Press Ctrl+C to stop...");
 try:
 	# Set up the GPIO channels - 3 outputs, one input
 	GPIO.setmode(GPIO.BCM)
@@ -17,7 +17,7 @@ try:
 		#ie, this will loop forever until GPIO.input(23) becomes 0
 		while (GPIO.input(23) == 1):
 			pass
-		print "Button Pressed!";
+		print ("Button Pressed!");
 		GPIO.output(14,True)
 		GPIO.output(15,False)
 		GPIO.output(18,False)
