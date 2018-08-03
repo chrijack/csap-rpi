@@ -33,7 +33,7 @@ def setup():
     GPIO.setwarnings(False)
     #set the gpio modes to BCM numbering
     GPIO.setmode(GPIO.BCM)
-    #set all LedPin's mode to output,and initial level to HIGH(3.3V)
+    #set all LedPin's mode to output,and initial level to LOW(0V)
     GPIO.setup(LEDPIN,GPIO.OUT,initial=GPIO.LOW)
 
     #set LEDPIN as PWM output,and frequency=100Hz
