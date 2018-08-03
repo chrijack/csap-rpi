@@ -15,18 +15,18 @@ import time
 BuzzerPin = 18
 
 def print_message():
-    print ("|**************************************|")
-    print ("|                 Beep                 |")
-    print ("|    ------------------------------    |")
-    print ("|        Buzzer connect to GPIO1       |")
-    print ("|                                      |")
-    print ("|            Make Buzzer beep          |")
-    print ("|                                      |")
-    print ("|                                OSOYOO|")
-    print ("|**************************************|\n")
-    print ('Program is running...')
-    print ('\n')
-    print ('Please press Ctrl+C to end the program...')
+    print("|**************************************|")
+    print("|                 Beep                 |")
+    print("|    ------------------------------    |")
+    print("|        Buzzer connect to GPIO1       |")
+    print("|                                      |")
+    print("|            Make Buzzer beep          |")
+    print("|                                      |")
+    print("|                                OSOYOO|")
+    print("|**************************************|\n")
+    print('Program is running...')
+    print('\n')
+    print('Please press Ctrl+C to end the program...')
 
 def setup():
     # Set the GPIO modes to BCM Numbering
