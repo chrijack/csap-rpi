@@ -18,10 +18,10 @@ def print_message():
     print ('|**********************************************|')
     print ('|                     Relay                    |')
     print ('|        -----------------------------------   |')
-    print ('|        GPIO0 connect to relay control pin    |')
-    print ('|        led connect to relay NormalOpen pin   |')
-    print ('|        5V connect to relay COM pin           |')
-    print ('|        Make relay to control a led           |')
+    print ('|        GPIO17 connected to relay control pin |')
+    print ('|        led connected to relay NormalOpen pin |')
+    print ('|        5V connected to relay COM pin         |')
+    print ('|        Relay controls an led                 |')
     print ('|        -----------------------------------   |')
     print ('|                                              |')
     print ('|                                        OSOYOO|')
@@ -30,7 +30,7 @@ def print_message():
     print ('Please press Ctrl+C to end the program...')
     print ('\n')
 
-#setup function for some setup---custom function
+#setup function
 def setup():
     GPIO.setwarnings(False)
     #set the gpio modes to BCM numbering
@@ -44,10 +44,10 @@ def main():
     print_message()
     while True:
         print ('|******************|')
-        print ('|  ...Relay close  |')
+        print ('|  ...Relay closed |')
         print ('|******************|\n')
-        
-        #disconnect
+
+        #Closed
         GPIO.output(RelayPin,GPIO.LOW)
         time.sleep(1)
 
@@ -55,18 +55,18 @@ def main():
         print ('|  Relay open...  |')
         print ('|*****************|\n')
         print ('')
-        #connect
+        #Open
         GPIO.output(RelayPin,GPIO.HIGH)
         time.sleep(1)
 
-#define a destroy function for clean up everything after the script finished
+#destroy function to clean up everything after the script has finished
 def destroy():
     #turn off relay
     GPIO.output(RelayPin,GPIO.LOW)
     #release resource
     GPIO.cleanup()
 #
-# if run this script directly ,do:
+# Script Execution:
 if __name__ == '__main__':
     setup()
     try:
@@ -74,5 +74,3 @@ if __name__ == '__main__':
     #when 'Ctrl+C' is pressed,child program destroy() will be executed.
     except KeyboardInterrupt:
         destroy()
-
-    
