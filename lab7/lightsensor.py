@@ -42,11 +42,11 @@ def setup():
     p.start(0)
     pass
 
-    
+
 #print message at the begining ---custom function
 def print_message():
     print ('|**********************************|')
-    print ('|   MCP3008 read lightsensor   |')
+    print ('|   MCP3008 read lightsensor       |')
     print ('|   -----------------------------  |')
     print ('|    | ADC |           | Pi  |     |')
     print ('|    |-----|-----------|-----|     |')
@@ -56,9 +56,8 @@ def print_message():
     print ('|    | CLK | connect to| SCLK|     |')
     print ('|    | CH0 | connect to| 3.3V|     |')
     print ('|    | CH1 | connect to| GND |     |')
-    print ('| ********************************** |')
-    print (' LED connect to GPIO1')
-    print ('|                            OSOYOO|')
+    print ('| ******************************** |')
+    print ('|  LED connected to GPIO18         |')
     print ('|**********************************|\n')
     print ('Program is running...')
     print ('Please press Ctrl+C to end the program...')
@@ -94,7 +93,7 @@ def readadc(adcnum, clockpin, mosipin, misopin, cspin):
                         adcout |= 0x1
 
         GPIO.output(cspin, True)
-        
+
         adcout >>= 1       # first bit is 'null' so drop it
         return adcout
 
@@ -117,7 +116,7 @@ def destroy():
     GPIO.output(LEDPIN,GPIO.LOW)
     #release resource
     GPIO.cleanup()
-    
+
 #
 # if run this script directly ,do:
 if __name__ == '__main__':
@@ -127,4 +126,3 @@ if __name__ == '__main__':
     #when 'Ctrl+C' is pressed,child program destroy() will be executed.
     except KeyboardInterrupt:
         destroy()
-
