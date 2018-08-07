@@ -23,7 +23,7 @@ LEDPIN = 18
 
 analogChannel = 0
 
-#setup function for some setup---custom function
+#setup function
 def setup():
     global p
     GPIO.setwarnings(False)
