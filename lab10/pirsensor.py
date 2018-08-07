@@ -48,18 +48,18 @@ def main():
             GPIO.output(BuzzerPin,GPIO.LOW)
             #time.sleep(0.5)
             print ('********************')
-            print ('*     alarm!     *')
+            print ('*     Alarm!       *')
             print ('********************')
             print ('\n')
-	    time.sleep(1)
+        time.sleep(1)
         else:
             GPIO.output(BuzzerPin,GPIO.HIGH)
             print ('====================')
-            print ('=     Not alarm...  =')
+            print ('=     No alarm...  =')
             print ('====================')
             print ('\n')
-	    time.sleep(1)
-            
+        time.sleep(1)
+
 
 #define a destroy function for clean up everything after the script finished
 def destroy():
@@ -77,4 +77,3 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         destroy()
         pass
-
