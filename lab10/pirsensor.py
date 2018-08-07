@@ -51,7 +51,7 @@ def main():
             print ('*     Alarm!       *')
             print ('********************')
             print ('\n')
-        time.sleep(1)
+            time.sleep(1)
         else:
             GPIO.output(BuzzerPin,GPIO.HIGH)
             print ('====================')
