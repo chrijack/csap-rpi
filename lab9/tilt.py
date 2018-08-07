@@ -21,7 +21,7 @@ def print_message():
     print ('==================================')
     print ('|            LED Alarm           |')
     print ('|        ----------------        |')
-    print ('|        If SW520D Tilt          |')
+    print ('|        If SW520D Tilts         |')
     print ('|                                |')
     print ('|        LED Will Blink          |')
     print ('|        ----------------        |')
@@ -30,7 +30,7 @@ def print_message():
     print ('==================================\n')
     print ('Program is running...')
     print ('Please press Ctrl+C to end the program...')
-    
+
 
 
 #setup function for some setup---custom function
@@ -61,7 +61,7 @@ def main():
         else:
             GPIO.output(LedPin,GPIO.HIGH)
             print ('====================')
-            print ('=     Not tilt...  =')
+            print ('=     Not tilting  =')
             print ('====================')
             print ('\n')
             time.sleep(1)
@@ -81,12 +81,3 @@ if __name__ == '__main__':
     #when 'Ctrl+C' is pressed,child program destroy() will be executed.
     except KeyboardInterrupt:
         destroy()
-
-        
-        
-
-
-
-
-
-    
