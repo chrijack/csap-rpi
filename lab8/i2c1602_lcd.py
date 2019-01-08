@@ -89,8 +89,8 @@ def main():
   while True:
 
     # Send some test
-    lcd_string("The Robots     <",LCD_LINE_1)
-    lcd_string("Are Coming!    <",LCD_LINE_2)
+    lcd_string("merry christmas<",LCD_LINE_1)
+    lcd_string("a pony!    <",LCD_LINE_2)
 
     time.sleep(3)
   
