@@ -1,16 +1,16 @@
-#terminal runs irexec command when you press button 1 /home/pi/IRtest1 will be executed
-begin   
+begin
     prog = irexec
     button = KEY_1
-    config = sudo python ./IRtest1.py
+    config = sudo python /home/pi/csap-rpi/lab12/IRtest1.py
 end
-begin   #terminal runs irexec command when you press button 2 /home/pi/IRtest2 will be executed
+begin
     prog = irexec
     button = KEY_2
-    config = sudo python ./IRtest2.py
+    config = sudo python /home/pi/csap-rpi/lab12/IRtest2.py
 end
-begin  #terminal runs irexec command when you press button 3 /home/pi/IRtest3 will be executed
+begin
     prog = irexec
     button = KEY_3
-    config = sudo python ./IRtest3.py
+    config = sudo python /home/pi/csap-rpi/lab12/IRtest3.py
 end
+
