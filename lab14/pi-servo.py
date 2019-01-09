@@ -67,11 +67,11 @@ while True:
 
 	# move to the center position
 	elif(input == "m"):
-		print "Move back to the center position."
+		print("Move back to the center position.")
 		Servo.start(7.5)
 		time.sleep(1)
 		# PWM stop
-		print "Move back to start position."
+		print("Move back to start position.")
 		Servo.stop()
 	
 	# move to the left
