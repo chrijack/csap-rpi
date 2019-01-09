@@ -1,0 +1,25 @@
+begin
+    prog = irexec
+    button = KEY_1
+    config = sudo python /home/pi/csap-rpi/lab13/open-1602.py
+end
+begin
+    prog = irexec
+    button = KEY_2
+    config = sudo python /home/pi/csap-rpi/lab13/close-1602.py
+end
+begin
+    prog = irexec
+    button = KEY_3
+    config = sudo python /home/pi/csap-rpi/lab13/get-lightsensor.py
+end
+begin
+    prog = irexec
+    button = KEY_4
+    config = sudo python /home/pi/csap-rpi/lab13/controlbeep.py
+end
+begin
+    prog = irexec
+    button = KEY_5
+    config = sudo python /home/pi/csap-rpi/lab13/get-tem-hum.py
+end
